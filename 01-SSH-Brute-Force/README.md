@@ -12,7 +12,12 @@ During active monitoring in Wazuh (`Threat Hunting -> Events`), a sequence of fa
 
 Inspecting the raw event (`full_log` from `journald`) revealed multiple failed login attempts targeting the non-existent user `auditoria` originating from `rhost=10.0.2.4`. Cross-referencing subsequent logs confirmed no `authentication_success` events occurred from that source IP.
 
-![Wazuh Alert Timeline](../01-timeline.png)
+![Wazuh Web Scan Timeline](../01-timeline.png)
+
+![Raw Log Evidence - Gobuster](../01-detalle-log.png)
+
+![MITRE ATT&CK Reconnaissance Details](../01-mitre-severidad.png)
+
 
 ## 2. False Positive Triage (Rootcheck)
 Prior to the brute force activity, a Level 11 alert (`Rule 521: Possible kernel level rootkit - Process '2959' hidden from /proc`) was triggered. Live endpoint verification using `ps -fp 2959` and checking `/proc/2959` confirmed the process no longer existed, identifying it as a benign race condition caused by short-lived Docker container processes during startup.
