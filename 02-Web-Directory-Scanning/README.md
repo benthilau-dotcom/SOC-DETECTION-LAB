@@ -13,7 +13,12 @@ During active monitoring of the Apache HTTP server (`httpd`) logs integrated int
 
 Inspecting the raw event details (`previous_output` / `full_log`) confirmed automated directory brute-forcing originating from IP `10.0.2.4` using the `gobuster/3.8.2` User-Agent (e.g., `GET /yml HTTP/1.1 404 196`). 
 
-![Web Scan Alert Details](../02-gobuster-alert.png)
+![Wazuh Web Scan Timeline](../02-timeline.png)
+
+![Raw Log Evidence - Gobuster](../02-detalle-log.png)
+
+![MITRE ATT&CK Reconnaissance Details](../02-mitre-severidad.png)
+
 
 ## 2. Impact Assessment
 * Filtered all HTTP events from source IP `10.0.2.4` to verify response status codes.
