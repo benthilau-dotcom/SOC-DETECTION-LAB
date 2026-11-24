@@ -11,4 +11,6 @@ This repository documents hands-on security monitoring, alert triage, false posi
 ## Documented Investigations
 1. [Incident #01: SSH Brute Force Detection & Containment (MITRE T1110)](./01-SSH-Brute-Force)
 2. [Incident #02: Web Directory Enumeration Detection with Gobuster (MITRE T1595)](./02-Web-Directory-Scanning)
+3. [Incident #03: Unauthorized Local Admin Account Creation on Windows (MITRE T1136 / T1484)](./03-Windows-Privilege-Escalation)
+
  
